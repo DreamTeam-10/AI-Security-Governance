@@ -1,4 +1,4 @@
-# Case Studies
+# Case Studies 01
 
 Framework-mapped breakdowns of real AI security incidents and policy developments. Each one follows the same structure — see [`template.md`](template.md) — and closes with actionable governance questions rather than a forward-looking teaser.
 
