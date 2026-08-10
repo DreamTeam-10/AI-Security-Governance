@@ -8,5 +8,6 @@ Framework-mapped breakdowns of real AI security incidents and policy development
 |---|---|---|---|
 | 01 | [AI Hallucination Defense](01-ai-hallucination-defense/README.md) | Three-layer defense model: least privilege, automated verification, human oversight | NIST AI RMF, MITRE ATLAS, OWASP Agentic Top 10 |
 | 02 | [Training Data Governance Incident](02-training-data-governance-incident/README.md) | Internal AI training data pipeline governance failure | NIST AI RMF, ISO/IEC 42001, MIT AI Risk Repository |
+| 03 | [Agentic Sandbox Escape](03-agentic-sandbox-escape-breach/README.md) | Sandbox escape into lateral movement into a shared cluster-admin credential breach | MITRE ATLAS, MITRE ATT&CK, MITRE D3FEND, NIST AI RMF, AWS Well-Architected, OWASP Agentic Top 10 |
 
 More entries land here as the companion LinkedIn series continues.
