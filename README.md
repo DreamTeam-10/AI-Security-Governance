@@ -1,4 +1,5 @@
 # READ.ME
+
 ### Cybersecurity × AI Security, cross-mapped to governance frameworks
 
 This repository bridges traditional cybersecurity disciplines with AI safety and fraud-mitigation standards. Every artifact here — incident breakdowns, governance tooling, reference material — is cross-mapped against a consistent stack of recognized frameworks, so the analysis holds up whether the reader is a security engineer, a compliance lead, or a non-technical stakeholder.
@@ -19,6 +20,7 @@ Most AI security commentary either stays abstract (principles with no mapping to
 | 🧱 MITRE D3FEND | v1.3 | Engineering countermeasures to detect, isolate, and deceive adversaries |
 | 💸 MITRE F3 (Fight Fraud Framework) | v1.1 | Post-compromise behaviors — how access converts into financial fraud |
 | 🏦 NIST CSF | 2.0 | High-level organizational cybersecurity risk guidance |
+| ☁️ AWS Well-Architected Framework | Current (6 pillars) | Cloud workload architecture, especially the Security pillar |
 | 🎓 MIT AI Risk Repository | — | Living taxonomy of AI risks for prioritization work |
 | 📡 CISA/NSA Joint Advisories | ongoing | Government-issued guidance and threat advisories |
 
@@ -31,6 +33,7 @@ READ.ME/
 ├── framework-reference/  → framework reference & analytical methodology
 ├── governance-raci/      → AI Agent Governance RACI matrix + narrative guide
 ├── case-studies/         → incident/policy breakdowns, mapped to frameworks
+├── claude-skills/        → Claude Skills that auto-apply the framework stack (offense-defense-skill, governance-skill)
 └── tools-and-resources/  → tools, standards bodies, and training links used across this work
 ```
 
