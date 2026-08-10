@@ -28,10 +28,6 @@ Categories referenced in this repo's case studies and Claude Skills ([`claude-sk
 
 **[OWASP](https://owasp.org)** — Top 10 for Agentic Applications and related application security guidance. Core to the framework stack used throughout this repo (see [`framework-reference/framework-reference.md`](../framework-reference/framework-reference.md)).
 
-## Career / Transition Resources
-
-**[DoD SkillBridge](https://www.skillbridge.mil/locations)** — DoD program for service members transitioning into civilian roles, including cybersecurity and AI security career paths.
-
 ## Repository
 
 **GitHub:** [DreamTeam-10/READ.ME](https://github.com/DreamTeam-10/READ.ME) — this repo.
