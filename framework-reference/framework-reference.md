@@ -191,19 +191,39 @@ Follows the same Annex SL structure shared across ISO management standards (2700
 
 **Cross-sector tie-in:** any customer-facing AI feature touching EU users needs classification against these four tiers before deployment, this applies equally to a bank's fraud model, a hospital's triage tool, or a retailer's recommendation engine.
 
+## 12. OWASP Top 10 for LLM Applications — 2026 edition (Aug 4, 2026) — 10 categories
+
+**What it is and why it matters across sectors:** The original OWASP AI-native risk taxonomy, purpose-built for LLMs functioning as a *component inside an application* (a chatbot, copilot, or RAG system) rather than an autonomous agent. Relevant anywhere an organization embeds a language model into a product, regardless of industry, since prompt injection and output-handling risks exist the moment untrusted text reaches a model — well before that model is ever given tool access. Complements the OWASP Agentic Top 10 above: this list governs the model as a component, and the moment it gains tools, memory, or autonomous consequences, risk shifts to the Agentic list.
+
+**Currency note:** the 2026 edition (released Aug 4, 2026 at Black Hat USA) reordered eight of ten entries and renamed one from the 2025 list, and for the first time weighted rankings 75% on practitioner consensus / 25% on 6,639 real-world incidents rather than consensus alone. If citing rank order, confirm it's still current — this list moves fast.
+
+| **ID** | **Category** | **Cross-sector example** |
+| --- | --- | --- |
+| LLM01:2026 | Prompt Injection | A crafted support ticket contains hidden text that redirects the assistant to disclose internal notes |
+| LLM02:2026 | Sensitive Information Disclosure | An AI assistant summarizing internal documents inadvertently surfaces a customer's PII embedded in a linked record |
+| LLM03:2026 | Excessive Agency | A support chatbot with refund-processing permissions is manipulated into issuing an unauthorized payout |
+| LLM04:2026 | Supply Chain | A pretrained model fine-tuned on a compromised third-party dataset carries the vulnerability into every deployment |
+| LLM05:2026 | Data and Model Poisoning | Manipulated fine-tuning data causes a model to systematically favor a competitor's product in recommendations |
+| LLM06:2026 | Unbounded Consumption | An attacker floods an AI chatbot with expensive queries to exhaust an org's inference budget (a "Denial of Wallet" attack) |
+| LLM07:2026 | Misinformation | A confidently-worded but factually wrong AI-generated answer triggers an automated downstream action based on bad data |
+| LLM08:2026 | Hidden Context Exposure | A user extracts the system prompt and internal tool schema through careful questioning, revealing business logic |
+| LLM09:2026 | Vector and Embedding Weaknesses | An attacker poisons a RAG knowledge base so retrieval returns manipulated content for specific queries |
+| LLM10:2026 | Improper Output Handling | Unvalidated model output is passed directly into a database query or shell command, functioning like stored XSS |
+
 ## Quick-reference: which framework to reach for, by scenario type
 
 | **Scenario** | **Framework to cite first** |
 | --- | --- |
 | Designing reference architectures / secure defaults for AI and agentic workloads | MAESTRO, OWASP Agentic Top 10 |
 | Building a multi-factor risk-tiering model | NIST CSF (Govern/Identify), NIST AI RMF (Map/Measure), EU AI Act's 4-tier model as real-world precedent |
-| Setting guardrail thresholds (hallucination, PII/PHI, prompt injection, toxicity) | OWASP Agentic Top 10, MITRE ATLAS, GDPR Article 25 |
+| Setting guardrail thresholds (hallucination, PII/PHI, prompt injection, toxicity) | OWASP LLM Top 10, OWASP Agentic Top 10, MITRE ATLAS, GDPR Article 25 |
 | Threat modeling a new AI system pattern | STRIDE (traditional), MAESTRO, MITRE ATLAS |
 | Financial services / regulated industry AI governance | ISO/IEC 42001, NIST AI RMF, SR 11-7 (model risk, banking-specific) |
 | Evaluating emerging agentic AI frameworks | OWASP Agentic Top 10, MAESTRO L3 |
+| Building or securing a standard LLM-powered app (chatbot, copilot, RAG — not autonomous) | OWASP LLM Top 10 |
 | Questions involving EU customer data or international AI deployment | GDPR, EU AI Act |
 | Financial fraud / payments-specific risk | MITRE F3 |
 | Turning a threat finding into a documented, auditable control | MITRE D3FEND (mapped to NIST 800-53) |
 
 ---
-*Source: consolidated from framework-reference working doc, comprehensive 11-framework edition.*
+*Source: consolidated from framework-reference working doc, comprehensive 12-framework edition.*
