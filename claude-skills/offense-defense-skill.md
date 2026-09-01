@@ -18,7 +18,7 @@ Framework versions and technique sets update on independent release cycles. **Do
 
 | Framework | Version | Scope | Canonical source |
 |---|---|---|---|
-| MITRE ATT&CK | v19.1 | 15 Enterprise tactics · 286 techniques (traditional enterprise TTPs) | attack.mitre.org |
+| MITRE ATT&CK | v19.1 | 14 Enterprise tactics · 286 techniques (traditional enterprise TTPs; Reconnaissance and Resource Development folded in from PRE-ATT&CK as of v8 — a commonly cited "15" is outdated) | attack.mitre.org |
 | MITRE ATLAS | v5.4 | 16 tactics · 84 techniques (AI/ML adversarial threats) | atlas.mitre.org |
 | MITRE D3FEND | v1.3 | 7 categories · 267 techniques (defensive countermeasures) | d3fend.mitre.org |
 
@@ -71,9 +71,3 @@ When a case study or control needs a concrete tool example rather than just a fr
 | Network detection & analysis | ATT&CK Lateral Movement detection | Zeek, Corelight, Darktrace |
 | Sandboxing / isolation for untrusted code execution | D3FEND Isolate | gVisor, Firecracker microVMs, Kata Containers — relevant directly to the HF dataset-processing-worker case study |
 | Cloud posture / metadata protection | D3FEND Harden | IMDSv2 enforcement, AWS GuardDuty, Wiz, Prisma Cloud |
-| Agent runtime interception (pre-execution policy for AI agents specifically) | Emerging — see AARM spec (CSAI Foundation) | Purpose-built agent runtime guardrails; traditional EDR does not yet cover this class well |
-| Forensics / timeline reconstruction | Post-incident, supports ATT&CK/ATLAS mapping | Velociraptor, open-weight LLM-assisted log analysis (as HF used GLM-5.2 when guardrailed models refused) |
-
-## When output is ambiguous or the mapping is contested
-
-State your confidence level plainly (e.g., "high confidence — this matches ATT&CK's definition directly" vs. "moderate confidence — this is the closest ATLAS category but the technique is new enough that MITRE may not have catalogued it yet"). This mirrors how the CSA and Hugging Face incident writeups you're working from handle uncertainty — they flag confidence levels rather than presenting speculation as fact.
