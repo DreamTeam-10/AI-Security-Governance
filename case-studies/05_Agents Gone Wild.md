@@ -1,6 +1,5 @@
 # Agents Gone Wild: When an Attacker's Own AI Agents Ignore the Attacker
 
-*Published: [date] · Companion post: [LinkedIn link]*
 
 ## The Scenario
 
