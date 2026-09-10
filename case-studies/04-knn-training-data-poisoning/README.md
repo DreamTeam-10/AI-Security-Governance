@@ -1,6 +1,6 @@
 # When a Model Remembers the Attacker Too
 
-*Published: [date] · Companion post: [LinkedIn link] · Illustrative scenario, built from my own MICS coursework*
+*Published: [date] · Companion post: [LinkedIn link] · Illustrative scenario, built from my AI/ML studies*
 
 ## What is KNN?
 
@@ -10,7 +10,7 @@ That simplicity is exactly what makes it worth a closer look from a security ang
 
 ## The Scenario
 
-In my CYBER 207 coursework, I built a KNN model that reads handwritten digits, the same kind of technology used in check processing, mail sorting, and form scanning. The assignment focused on accuracy. It didn't ask what happens if someone can quietly add bad examples to what the model remembers.
+In my AI/ML studies, I built a KNN model that reads handwritten digits, the same kind of technology used in check processing, mail sorting, and form scanning. The assignment focused on accuracy. It didn't ask what happens if someone can quietly add bad examples to what the model remembers.
 
 That question matters because KNN doesn't work like most machine learning models. A neural network has to be retrained before new data changes its behavior, and that retraining is usually a visible, reviewed event. KNN has no such step. It just remembers. The moment someone adds a mislabeled example to its training set, that example is live in production for the very next prediction, no review, no retraining run, nothing to catch in a change log.
 
@@ -53,4 +53,4 @@ None of these are science projects. They're production tools already used by rea
 
 ## Companion Notebook
 
-`case_study_04_knn_poisoning.ipynb` is a runnable notebook that demonstrates both attacks and the defense described above, live, with real output rather than a mockup. Built on the same KNN digit classifier from CYBER 207 Project 1.
+`case_study_04_knn_poisoning.ipynb` is a runnable notebook that demonstrates both attacks and the defense described above, live, with real output rather than a mockup. Built on the same KNN digit classifier from my AI/ML studies.
