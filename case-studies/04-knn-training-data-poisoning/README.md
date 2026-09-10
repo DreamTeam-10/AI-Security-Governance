@@ -1,6 +1,5 @@
 # When a Model Remembers the Attacker Too
 
-*Published: [date] · Companion post: [LinkedIn link] · Illustrative scenario, built from my AI/ML studies*
 
 ## What is KNN?
 
