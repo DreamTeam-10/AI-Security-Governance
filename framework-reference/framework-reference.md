@@ -210,6 +210,33 @@ Follows the same Annex SL structure shared across ISO management standards (2700
 | LLM09:2026 | Vector and Embedding Weaknesses | An attacker poisons a RAG knowledge base so retrieval returns manipulated content for specific queries |
 | LLM10:2026 | Improper Output Handling | Unvalidated model output is passed directly into a database query or shell command, functioning like stored XSS |
 
+## 13. SR 26-2: Revised Guidance on Model Risk Management (April 17, 2026)
+
+**What it is and why it matters across sectors:** The current US banking supervisory guidance on model risk, issued by the Federal Reserve as SR 26-2 and issued in parallel by the OCC (Office of the Comptroller of the Currency, Bulletin 2026-13) and the FDIC (Federal Deposit Insurance Corporation, FIL-15-2026). It replaces SR 11-7 and SR 21-8. A "model" here is any method that turns data into estimates used for decisions, so it reaches credit scoring, fraud detection, capital planning, and pricing. Scrutiny scales with a model's materiality (how much damage a wrong answer could do) and the guidance applies by bank size, so confirm the asset threshold at the source before citing it.
+
+**Currency note:** SR 26-2 explicitly excludes generative AI and agentic AI (footnote 3), and the agencies have signaled a request for information on AI model risk. Until that lands, banks governing AI agents should pair this guidance with NIST AI RMF and the OWASP lists above, not treat SR 26-2 as covering them. Primary sources: federalreserve.gov (SR 26-2) and occ.gov (Bulletin 2026-13).
+
+| **Element** | **What it asks for** | **Cross-sector example** |
+| --- | --- | --- |
+| Risk-based scaling | Governance effort follows each model's materiality and use, not one rule for all | A fraud-scoring model that blocks payments gets deeper review than an internal forecasting spreadsheet |
+| Model inventory | A current list of models, owners, purpose, and status | A bank cannot tell regulators which vendor model approves loans until the inventory exists |
+| Validation and effective challenge | Independent, qualified people test the model and push back on its builders | A second team re-runs a credit model on fresh data and questions its assumptions before launch |
+| Vendor models | Third-party models get the same scrutiny, using the information the vendor will share | A purchased AML (anti-money laundering) alert engine is tested on the bank's own transactions |
+| Ongoing monitoring | Performance is tracked after launch, with triggers for review or retirement | Approval rates drift after a market shift and trigger a model review |
+
+## 14. SR 11-7: Guidance on Model Risk Management (April 4, 2011), rescinded
+
+**What it is and why it matters across sectors:** The original US model risk guidance from the Federal Reserve and OCC. For fifteen years it set the vocabulary banks and auditors still use: effective challenge, validation, model inventory. It is now superseded by SR 26-2 (section 13), but it stays in this reference because exam findings, internal policies, and vendor contracts written before 2026 still cite it by name.
+
+**Currency note:** Do not cite SR 11-7 as current. Use it for history, for reading older policies, and for mapping legacy controls to SR 26-2.
+
+| **Element** | **What it asked for** | **Cross-sector example** |
+| --- | --- | --- |
+| Effective challenge | Critical review by informed people with the standing to push back | A validator overrules a business line that wants to launch a model with thin testing |
+| Three validation elements | Check conceptual soundness, run ongoing monitoring, and analyze outcomes | A pricing model is checked on its theory, tracked monthly, and compared with actual results |
+| Annual periodic review | Models are reviewed at least once a year | A model with no changes still gets a yearly sign-off |
+| Model inventory and governance | Board and senior management own the framework, policies, and roles | A model risk committee approves new high-impact models |
+
 ## Quick-reference: which framework to reach for, by scenario type
 
 | **Scenario** | **Framework to cite first** |
@@ -218,12 +245,13 @@ Follows the same Annex SL structure shared across ISO management standards (2700
 | Building a multi-factor risk-tiering model | NIST CSF (Govern/Identify), NIST AI RMF (Map/Measure), EU AI Act's 4-tier model as real-world precedent |
 | Setting guardrail thresholds (hallucination, PII/PHI, prompt injection, toxicity) | OWASP LLM Top 10, OWASP Agentic Top 10, MITRE ATLAS, GDPR Article 25 |
 | Threat modeling a new AI system pattern | STRIDE (traditional), MAESTRO, MITRE ATLAS |
-| Financial services / regulated industry AI governance | ISO/IEC 42001, NIST AI RMF, SR 11-7 (model risk, banking-specific) |
+| Financial services / regulated industry AI governance | ISO/IEC 42001, NIST AI RMF, SR 26-2 (bank model risk; excludes generative and agentic AI) |
 | Evaluating emerging agentic AI frameworks | OWASP Agentic Top 10, MAESTRO L3 |
 | Building or securing a standard LLM-powered app (chatbot, copilot, RAG — not autonomous) | OWASP LLM Top 10 |
 | Questions involving EU customer data or international AI deployment | GDPR, EU AI Act |
+| Model risk management in a US bank (credit, fraud, pricing models) | SR 26-2 (SR 11-7 is rescinded, cite only for legacy policies) |
 | Financial fraud / payments-specific risk | MITRE F3 |
 | Turning a threat finding into a documented, auditable control | MITRE D3FEND (mapped to NIST 800-53) |
 
 ---
-*Source: consolidated from framework-reference working doc, comprehensive 12-framework edition.*
+*Source: consolidated from framework-reference working doc, comprehensive 14-framework edition; SR 26-2 and SR 11-7 added Oct 21, 2026 from Federal Reserve and OCC primary sources.*
